@@ -1,10 +1,21 @@
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom'; // Importa BrowserRouter
 import './App.css';
+import NavBar from './Components/NavBar/NavBar';
+import SideBar from './Components/SideBaar/SideBar';
 
 function App() {
   return (
-    <div className="App">
-      todo bien
-    </div>
+    <Router>
+      <NavBar />
+      <div className='flex'>
+        <SideBar />
+        {/* //contenido */}
+        <div className='content'>
+          Este es el contenido
+        </div>
+      </div>
+    </Router>
   );
 }
 
