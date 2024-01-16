@@ -12,6 +12,12 @@
     padding: 1rem 2rem;
     border-bottom: 2px solid $black;
 }
+.content{
+  width: 100%;
+}
+.flex{
+  display: flex;
+}
 .Sidebar{
   width: 14rem;
   height: calc(100vh - 52px);
@@ -21,6 +27,9 @@
     padding: 1em 2em;
     li{
       margin-bottom: 1em;
+      a{
+        text-decoration: none;
+      }
     }
   }
 }

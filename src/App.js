@@ -1,8 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Importa BrowserRouter
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'; // Importa BrowserRouter y Routes
 import './App.scss';
 import NavBar from './Components/NavBar/NavBar';
 import SideBar from './Components/SideBaar/SideBar';
+import Home from './Pages/Home/Home';
+import Lista from './Pages/Home/Lista/Lista';
+import RegistrarAlumno from './Pages/Home/RegistarAlumno/RegistrarAlumno';
 
 function App() {
   return (
@@ -10,9 +13,13 @@ function App() {
       <NavBar />
       <div className='flex'>
         <SideBar />
-        {/* //contenido */}
+        {/* Contenido */}
         <div className='content'>
-          Este es el contenido
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/lista' element={<Lista />} />
+            <Route path='/RegistrarAlumno' element={<RegistrarAlumno />} />
+          </Routes>
         </div>
       </div>
     </Router>
@@ -20,3 +27,4 @@ function App() {
 }
 
 export default App;
+

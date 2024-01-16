@@ -6,13 +6,13 @@ const SideBar = () => {
 
             <ul>
                 <li className='li'>
-                    <Link to="">Inicio</Link>
+                    <Link to="/">Inicio</Link>
                 </li>
                 <li>
-                    <Link to="">Vnetas</Link>
+                    <Link to="/RegistrarAlumno">Registar Alumno</Link>
                 </li>
                 <li>
-                    <Link to="">Registrp</Link>
+                    <Link to="/lista">Lista Alumno</Link>
                 </li>
             </ul>
         </div>
