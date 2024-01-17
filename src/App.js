@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'; // Importa BrowserRouter y Routes
 import './App.scss';
+import 'bootstrap/dist/css/bootstrap.min.css'; //bootstrap
 import NavBar from './Components/NavBar/NavBar';
 import SideBar from './Components/SideBaar/SideBar';
 import Home from './Pages/Home/Home';
@@ -28,3 +29,5 @@ function App() {
 
 export default App;
 
+
+//paginas: Alumnos, Pagos, Informes, Pendinetes, Registrar, Detalles d fondos, Salir
