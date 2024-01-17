@@ -1,10 +1,17 @@
 import React from 'react';
+import { Col, Container, Row } from 'reactstrap';
 
 const Home = () => {
     return (
-        <div>
-            <h1 className="text-center mt-5">Welcome to our website!</h1>
-        </div>
+        <>
+        <Container>
+            <Row>
+                <Col xs="4" className="bg-primary">COLUMNA 1</Col>
+                <Col xs="4" className="bg-warning">COLUMNA 2</Col>
+                <Col xs="4" className="bg-danger">COLUMNA 3</Col>
+            </Row>
+        </Container>
+        </>
     );
 }
 

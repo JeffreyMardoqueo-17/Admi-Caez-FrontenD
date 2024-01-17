@@ -7,19 +7,25 @@ import SideBar from './Components/SideBaar/SideBar';
 import Home from './Pages/Home/Home';
 import Lista from './Pages/Home/Lista/Lista';
 import RegistrarAlumno from './Pages/Home/RegistarAlumno/RegistrarAlumno';
+import Informes from './Pages/Home/Informes/Informes';
+import Pendientes from './Pendientes/Pendientes';
+import DetallesFondos from './Pages/Home/DetallesFondos/DetallesFondos';
 
 function App() {
   return (
     <Router>
-      <NavBar />
       <div className='flex'>
         <SideBar />
         {/* Contenido */}
-        <div className='content'>
+        <div className='content w-100'>
+          <NavBar />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/lista' element={<Lista />} />
             <Route path='/RegistrarAlumno' element={<RegistrarAlumno />} />
+            <Route path='/informes' element={<Informes />}/>
+            <Route path='/alumnosPendientes' element={<Pendientes />}/>
+            <Route path='/detallesdeFondos' element ={<DetallesFondos />}/>
           </Routes>
         </div>
       </div>
@@ -30,4 +36,4 @@ function App() {
 export default App;
 
 
-//paginas: Alumnos, Pagos, Informes, Pendinetes, Registrar, Detalles d fondos, Salir
+//paginas: Alumnos, Pagos, Informes, Pendinetes, Registrar, Detalles d fondos, Salir 

@@ -6,8 +6,9 @@
 // variables de colore sy eso
   $white: #Ffff;
   $black: #1c2326;
-  $contraste: rgb(16, 15, 88);
-
+  $contraste: rgb(10, 10, 50);
+  $bgPrimary: #05051A;
+  $border:#FFD028;
 .navBar{
     background-color: $white;
     padding: 1rem 2rem;
@@ -20,10 +21,10 @@
   display: flex;
 }
 .Sidebar{
-  width: 14rem;
-  height: calc(100vh - 52px);
-  border-right: 2px solid $black;
-  background-color: #03003d;
+  width: 20rem;
+  height: 100vh;
+  border-right: 2px solid $border;
+  background-color: $bgPrimary;
   ul{
     list-style: none;
     padding: 1em 2em;
@@ -31,11 +32,11 @@
       margin-bottom: 1em;
       a{
         text-decoration: none;
-        font-weight: bold;
+        text-align: left;
         &.active{
           background-color: $contraste;
           color: $white;
-          font-weight: bold;
+          border: .1px solid $border;
         }
       }
     }

@@ -24,13 +24,13 @@ const SideBar = () => {
                     <NavLink to="/lista" className='text-white rounded py-2 w-100 d-inline-block px-3'> <IoIosListBox className='me-2' />Lista Alumno</NavLink>
                 </li>
                 <li>
-                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><IoDocument className='me-2'/>Informes</NavLink>
+                    <NavLink to="/informes" className='text-white rounded py-2 w-100 d-inline-block px-3'><IoDocument className='me-2'/>Informes</NavLink>
                 </li>
                 <li>
-                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><FaUsersViewfinder className='me-2' />Pendientes</NavLink>
+                    <NavLink to="/alumnosPendientes" className='text-white rounded py-2 w-100 d-inline-block px-3'><FaUsersViewfinder className='me-2' />Pendientes</NavLink>
                 </li>
                 <li>
-                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><HiDocumentSearch className='me-2'/>Detalles de fondos</NavLink>
+                    <NavLink to="/detallesFondos" className='text-white rounded py-2 w-100 d-inline-block px-3'><HiDocumentSearch className='me-2'/>Detalles de fondos</NavLink>
                 </li>
                 <li>
                     <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'> <IoExit className='me-2'/>Salir</NavLink>
