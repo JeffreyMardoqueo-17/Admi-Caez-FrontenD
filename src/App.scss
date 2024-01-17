@@ -6,6 +6,7 @@
 // variables de colore sy eso
   $white: #Ffff;
   $black: #1c2326;
+  $contraste: rgb(16, 15, 88);
 
 .navBar{
     background-color: $white;
@@ -22,6 +23,7 @@
   width: 14rem;
   height: calc(100vh - 52px);
   border-right: 2px solid $black;
+  background-color: #03003d;
   ul{
     list-style: none;
     padding: 1em 2em;
@@ -29,6 +31,12 @@
       margin-bottom: 1em;
       a{
         text-decoration: none;
+        font-weight: bold;
+        &.active{
+          background-color: $contraste;
+          color: $white;
+          font-weight: bold;
+        }
       }
     }
   }

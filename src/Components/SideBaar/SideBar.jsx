@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 //icons
 import * as FaIcons from 'react-icons/fa';
 import { IoHome } from "react-icons/io5"; //home
@@ -15,25 +15,25 @@ const SideBar = () => {
 
             <ul>
                 <li className='li'>
-                    <Link to="/" className='text-dark'><IoHome className='me-2'/>Inicio</Link>
+                    <NavLink to="/" className='text-white rounded py-2 w-100 d-inline-block px-3'activeClassName="active"><IoHome className='me-2'/>Inicio</NavLink>
                 </li>
                 <li>
-                    <Link  to="/RegistrarAlumno" className='text-dark'> <FaUserPlus className='me-2'/>Registar Alumno</Link>
+                    <NavLink  to="/RegistrarAlumno" className='text-white rounded py-2 w-100 d-inline-block px-3'> <FaUserPlus className='me-2'/>Registar Alumno</NavLink>
                 </li>
                 <li>
-                    <Link to="/lista" className='text-dark '> <IoIosListBox className='me-2' />Lista Alumno</Link>
+                    <NavLink to="/lista" className='text-white rounded py-2 w-100 d-inline-block px-3'> <IoIosListBox className='me-2' />Lista Alumno</NavLink>
                 </li>
                 <li>
-                    <Link to="" className='text-dark'><IoDocument className='me-2'/>Informes</Link>
+                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><IoDocument className='me-2'/>Informes</NavLink>
                 </li>
                 <li>
-                    <Link to="" className='text-dark'><FaUsersViewfinder className='me-2' />Pendientes</Link>
+                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><FaUsersViewfinder className='me-2' />Pendientes</NavLink>
                 </li>
                 <li>
-                    <Link to="" className='text-dark'><HiDocumentSearch className='me-2'/>Detalles de fondos</Link>
+                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'><HiDocumentSearch className='me-2'/>Detalles de fondos</NavLink>
                 </li>
                 <li>
-                    <Link to="" className='text-dark'> <IoExit className='me-2'/>Salir</Link>
+                    <NavLink to="" className='text-white rounded py-2 w-100 d-inline-block px-3'> <IoExit className='me-2'/>Salir</NavLink>
                 </li>
             </ul>
         </div>
