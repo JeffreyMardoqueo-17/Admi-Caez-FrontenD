@@ -1,39 +1,48 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 // variables de colore sy eso
-  $white: #Ffff;
-  $black: #1c2326;
-  $contraste: rgb(10, 10, 50);
-  $bgPrimary: #05051A;
-  $border:#FFD028;
-.navBar{
-    background-color: $white;
-    padding: 1rem 2rem;
-    border-bottom: 2px solid $black;
+$white: #Ffff;
+$black: #1c2326;
+$contraste: rgb(10, 10, 50);
+$bgPrimary: #05051A;
+$border: #FFD028;
+
+.navBar {
+  background-color: $white;
+  padding: 1rem 2rem;
+  border-bottom: 2px solid $black;
 }
-.content{
+
+.content {
   width: 100%;
 }
-.flex{
+
+.flex {
   display: flex;
 }
-.Sidebar{
+
+.Sidebar {
   width: 20rem;
   height: 100vh;
   border-right: 2px solid $border;
   background-color: $bgPrimary;
-  ul{
+  overflow: hidden; // Evita que el contenido sobrepase el área visible
+
+  ul {
     list-style: none;
     padding: 1em 2em;
-    li{
+
+    li {
       margin-bottom: 1em;
-      a{
+
+      a {
         text-decoration: none;
         text-align: left;
-        &.active{
+
+        &.active {
           background-color: $contraste;
           color: $white;
           border: .1px solid $border;
