@@ -36,7 +36,7 @@ const Formulario = ({ onSubmit }) => {
     };
 
     // Datos de ejemplo para ComboBox
-    const tiposDocumento = ['NIE', 'DUI'];
+    const tiposDocumento = ['NIE'];
     const opcionesGrados = ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto'];
     const opcionesEncargados = ['YO', 'Mi mujer', 'yooo'];
     const opcionesTurno = ['Mañana', 'Tarde'];
