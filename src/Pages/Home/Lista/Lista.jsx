@@ -1,6 +1,6 @@
 import React from 'react';
 import TableB from '../../../Components/TableB/TableB';
-
+import './Lista.scss'
 const Lista = () => {
     const headers = ["NIE", "NOMBRE", "GRADO", "TURNO", "ESTADO", "PAGAR"];
     const data = [

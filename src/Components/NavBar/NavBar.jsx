@@ -18,19 +18,19 @@ function NavBar(args) {
 
     return (
         <div>
-            <Navbar style={{ backgroundColor: '#05051A' }} dark expand="md">
+            <Navbar style={{ backgroundColor: '#ffff', }} dark expand="md">
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ms-auto" navbar>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret className="text-white">
+                        <UncontrolledDropdown nav inNavbar className='text-black'>
+                            <DropdownToggle nav caret style={{ color: '#4d51b3', fontWeight: '600' }}>
                                 Jeffrey Mardoqueo
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>Mi cuenta</DropdownItem>
-                                <DropdownItem>Cerrar Seccion</DropdownItem>
+                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Mi cuenta</DropdownItem>
+                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Cerrar Sesión</DropdownItem>
                                 <DropdownItem divider />
-                                <DropdownItem>Contactar con el Desarrollador</DropdownItem>
+                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Contactar con el Desarrollador</DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>

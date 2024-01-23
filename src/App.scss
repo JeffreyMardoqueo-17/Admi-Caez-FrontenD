@@ -6,9 +6,9 @@
 // variables de colore sy eso
 $white: #Ffff;
 $black: #1c2326;
-$contraste: rgb(10, 10, 50);
+$contraste: #05051A ;
 $bgPrimary: #05051A;
-$border: #FFD028;
+$border: #4d51b3;
 
 
 /* Estilo para la barra de desplazamiento */
@@ -64,13 +64,14 @@ $border: #FFD028;
   background-color: $bgPrimary;
   overflow: hidden; // Evita que el contenido sobrepase el área visible
   position: fixed;
+  border-top-right-radius: 10%;
   ul {
     list-style: none;
     padding: 1em 2em;
+    margin-top: 50px;
 
     li {
       margin-bottom: 1em;
-
       a {
         text-decoration: none;
         text-align: left;
@@ -78,7 +79,7 @@ $border: #FFD028;
         &.active {
           background-color: $contraste;
           color: $white;
-          border: .1px solid $border;
+          border-bottom: 1px solid $border;
         }
       }
     }
