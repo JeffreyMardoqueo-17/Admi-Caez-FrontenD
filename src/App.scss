@@ -10,14 +10,47 @@ $contraste: rgb(10, 10, 50);
 $bgPrimary: #05051A;
 $border: #FFD028;
 
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 6px;
+  /* Ancho de la barra de desplazamiento */
+}
+
+/* Estilo para el riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: var(--bg);
+  /* Color de fondo del riel */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento (la parte que se arrastra) */
+::-webkit-scrollbar-thumb {
+  background: var(--MORADOCLaro);
+  /* Color del pulgar de la barra de desplazamiento */
+}
+
+/* Estilo para el pulgar de la barra de desplazamiento al pasar el mouse sobre él */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--rosadito);
+  cursor: pointer;
+}
+
 .navBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: $white;
   padding: 1rem 2rem;
   border-bottom: 2px solid $black;
+  z-index: 1000;
 }
 
 .content {
-  width: 100%;
+  // width: 100%;ç
+  margin-left: 17rem;
+  /* Ancho del Sidebar */
+  width: calc(100% - 17rem);
+  /* Resta el ancho del Sidebar al 100% */
 }
 
 .flex {
@@ -25,12 +58,12 @@ $border: #FFD028;
 }
 
 .Sidebar {
-  width: 20rem;
-  height: 100vh;
-  border-right: 2px solid $border;
+  width: 17rem;
+  height: 120vh;
+  // border-right: 2px solid $border;
   background-color: $bgPrimary;
   overflow: hidden; // Evita que el contenido sobrepase el área visible
-
+  position: fixed;
   ul {
     list-style: none;
     padding: 1em 2em;

@@ -17,6 +17,7 @@ const RegistrarAlumno = () => {
             {/* Pasa la función handleFormSubmit como prop al componente Formulario */}
             <Formulario onSubmit={handleFormSubmit} />
             {/* Pasa los datos ingresados al componente TableB */}
+
             <TableB datos={datosAlumnos} />
         </div>
     );
