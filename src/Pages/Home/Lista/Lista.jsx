@@ -24,7 +24,7 @@ const Lista = () => {
 
     return (
         <div>
-            <h1 className='m-5'>Lista de alumnos</h1>
+            <h1 className='m-5 title'>Lista de alumnos</h1>
             <TableB headers={headers} data={data} />
         </div>
     );

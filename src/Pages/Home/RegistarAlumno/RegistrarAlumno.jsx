@@ -13,6 +13,7 @@ const RegistrarAlumno = () => {
 
     return (
         <div>
+            <h2 className='m-5 title'>Registrar Alumno</h2>
             <Formulario onSubmit={handleFormSubmit} />
             <TableB headers={headers} data={datosAlumnos} />
         </div>

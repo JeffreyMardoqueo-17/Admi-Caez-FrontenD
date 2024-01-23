@@ -56,6 +56,10 @@ $border: #4d51b3;
 .flex {
   display: flex;
 }
+.title{
+  color: $border;
+  font-weight: 600;
+}
 
 .Sidebar {
   width: 17rem;

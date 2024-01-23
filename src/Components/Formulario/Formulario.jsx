@@ -12,18 +12,14 @@ const Formulario = ({ onSubmit }) => {
         turno: '',
     });
 
-    // Función para manejar el cambio en los inputs del formulario
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setDatosFormulario({ ...datosFormulario, [name]: value });
     };
 
-    // Función para manejar el envío del formulario
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Llama a la función onSubmit pasando los datos del formulario
         onSubmit(datosFormulario);
-        // Limpia los datos del formulario después de enviarlo
         setDatosFormulario({
             tipoDocumento: '',
             numeroDocumento: '',
@@ -35,12 +31,10 @@ const Formulario = ({ onSubmit }) => {
         });
     };
 
-    // Datos de ejemplo para ComboBox
     const tiposDocumento = ['NIE'];
     const opcionesGrados = ['Primero', 'Segundo', 'Tercero', 'Cuarto', 'Quinto'];
     const opcionesEncargados = ['YO', 'Mi mujer', 'yooo'];
     const opcionesTurno = ['Mañana', 'Tarde'];
-
 
     return (
         <Form className='m-4' onSubmit={handleSubmit}>
@@ -79,94 +73,87 @@ const Formulario = ({ onSubmit }) => {
 
             {/* Sección para Nombre y Apellido */}
             <div className="row">
-                <div className="col-md-6">
-                    <div className="input-group mb-3">
-                        <span className="input-group-text" id="basic-addon1">Nombre</span>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Ejemplo: Jeffrey Mardoqueo "
-                            aria-label="Nombre"
-                            aria-describedby="basic-addon1"
-                            name="nombre"
-                            value={datosFormulario.nombre}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                </div>
+                <FormGroup className='col-md-6'>
+                    <Label for="nombre">Nombre:</Label>
+                    <Input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        value={datosFormulario.nombre}
+                        onChange={handleInputChange}
+                        placeholder="Ejemplo: Jeffrey"
+                    />
+                </FormGroup>
 
-                <div className="col-md-6">
-                    <div className="input-group mb-3">
-                        <span className="input-group-text" id="basic-addon1">Apellido</span>
-                        <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Ejemplo: Jeffrey Mardoqueo "
-                            aria-label="Apellido"
-                            aria-describedby="basic-addon1"
-                            name="apellido"
-                            value={datosFormulario.apellido}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                </div>
+                <FormGroup className='col-md-6'>
+                    <Label for="apellido">Apellido:</Label>
+                    <Input
+                        type="text"
+                        name="apellido"
+                        id="apellido"
+                        value={datosFormulario.apellido}
+                        onChange={handleInputChange}
+                        placeholder="Ejemplo: Mardoqueo"
+                    />
+                </FormGroup>
             </div>
 
-            {/* Sección para Grado y Encargado */}
-            <FormGroup className='col-4'>
-                <Label for="grado">Seleccionar Grado:</Label>
-                <Input
-                    type="select"
-                    name="grado"
-                    id="grado"
-                    value={datosFormulario.grado}
-                    onChange={handleInputChange}
-                >
-                    <option value="" disabled>Elige un grado...</option>
-                    {opcionesGrados.map((grado, index) => (
-                        <option key={index} value={grado}>
-                            {grado}
-                        </option>
-                    ))}
-                </Input>
-            </FormGroup>
+            {/* Sección para Grado, Encargado y Turno */}
+            <div className="row">
+                <FormGroup className='col-4'>
+                    <Label for="grado">Seleccionar Grado:</Label>
+                    <Input
+                        type="select"
+                        name="grado"
+                        id="grado"
+                        value={datosFormulario.grado}
+                        onChange={handleInputChange}
+                    >
+                        <option value="" disabled>Elige un grado...</option>
+                        {opcionesGrados.map((grado, index) => (
+                            <option key={index} value={grado}>
+                                {grado}
+                            </option>
+                        ))}
+                    </Input>
+                </FormGroup>
 
-            <FormGroup className='col-4'>
-                <Label for="encargado">Seleccionar Encargado:</Label>
-                <Input
-                    type="select"
-                    name="encargado"
-                    id="encargado"
-                    value={datosFormulario.encargado}
-                    onChange={handleInputChange}
-                >
-                    <option value="" disabled>Elige tu encargado...</option>
-                    {opcionesEncargados.map((encargado, index) => (
-                        <option key={index} value={encargado}>
-                            {encargado}
-                        </option>
-                    ))}
-                </Input>
-            </FormGroup>
+                <FormGroup className='col-4'>
+                    <Label for="encargado">Seleccionar Encargado:</Label>
+                    <Input
+                        type="select"
+                        name="encargado"
+                        id="encargado"
+                        value={datosFormulario.encargado}
+                        onChange={handleInputChange}
+                    >
+                        <option value="" disabled>Elige tu encargado...</option>
+                        {opcionesEncargados.map((encargado, index) => (
+                            <option key={index} value={encargado}>
+                                {encargado}
+                            </option>
+                        ))}
+                    </Input>
+                </FormGroup>
 
-            {/* Sección para Turno */}
-            <FormGroup className='col-4'>
-                <Label for="turno">Seleccionar Turno:</Label>
-                <Input
-                    type="select"
-                    name="turno"
-                    id="turno"
-                    value={datosFormulario.turno}
-                    onChange={handleInputChange}
-                >
-                    <option value="" disabled>Elige un turno...</option>
-                    {opcionesTurno.map((turno, index) => (
-                        <option key={index} value={turno}>
-                            {turno}
-                        </option>
-                    ))}
-                </Input>
-            </FormGroup>
+                <FormGroup className='col-4'>
+                    <Label for="turno">Seleccionar Turno:</Label>
+                    <Input
+                        type="select"
+                        name="turno"
+                        id="turno"
+                        value={datosFormulario.turno}
+                        onChange={handleInputChange}
+                    >
+                        <option value="" disabled>Elige un turno...</option>
+                        {opcionesTurno.map((turno, index) => (
+                            <option key={index} value={turno}>
+                                {turno}
+                            </option>
+                        ))}
+                    </Input>
+                </FormGroup>
+            </div>
             <button type="submit" className="btn btn-primary">Enviar</button>
         </Form>
     );

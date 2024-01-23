@@ -8,7 +8,7 @@ import Home from './Pages/Home/Home';
 import Lista from './Pages/Home/Lista/Lista';
 import RegistrarAlumno from './Pages/Home/RegistarAlumno/RegistrarAlumno';
 import Informes from './Pages/Home/Informes/Informes';
-import Pendientes from './Pendientes/Pendientes';
+import Pendientes from './Pages/Home/Pendientes/Pendientes.jsx';
 import DetallesFondos from './Pages/Home/DetallesFondos/DetallesFondos';
 
 function App() {
