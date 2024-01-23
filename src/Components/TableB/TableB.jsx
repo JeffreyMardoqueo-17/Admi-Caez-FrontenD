@@ -1,30 +1,22 @@
 import React from 'react';
 
-const TableB = ({ datos }) => {
+const TableB = ({ headers, data }) => {
     return (
         <div className="m-5">
             <table className="table table-striped table-hover mx-auto my-1">
                 <thead>
                     <tr className='font-monospace'>
-                        <th scope="col">Tipo de Documento</th>
-                        <th scope="col">Número de Documento</th>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
-                        <th scope="col">Encargado</th>
-                        <th scope='col'>Grado</th>
-                        <th scope='col'>Turno</th>
+                        {headers && headers.map((header, index) => (
+                            <th key={index} scope="col">{header}</th>
+                        ))}
                     </tr>
                 </thead>
                 <tbody>
-                    {datos && datos.map((fila, index) => (
+                    {data && data.map((fila, index) => (
                         <tr key={index}>
-                            <td>{fila.tipoDocumento}</td>
-                            <td>{fila.numeroDocumento}</td>
-                            <td>{fila.nombre}</td>
-                            <td>{fila.apellido}</td>
-                            <td>{fila.encargado}</td>
-                            <td>{fila.grado}</td>
-                            <td>{fila.turno}</td>
+                            {headers && headers.map((header, index) => (
+                                <td key={index}>{fila[header.toLowerCase()]}</td>
+                            ))}
                         </tr>
                     ))}
                 </tbody>
