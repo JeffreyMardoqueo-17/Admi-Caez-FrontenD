@@ -27,10 +27,10 @@ function NavBar(args) {
                                 Jeffrey Mardoqueo
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Mi cuenta</DropdownItem>
-                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Cerrar Sesión</DropdownItem>
+                                <DropdownItem >Mi cuenta</DropdownItem>
+                                <DropdownItem >Cerrar Sesión</DropdownItem>
                                 <DropdownItem divider />
-                                <DropdownItem style={{color: '#05051A', fontWeight:'400'}}>Contactar con el Desarrollador</DropdownItem>
+                                <DropdownItem >Contactar con el Desarrollador</DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>

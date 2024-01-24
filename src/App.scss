@@ -78,6 +78,7 @@ $border: #4d51b3;
       a {
         text-decoration: none;
         text-align: left;
+        font-size: 17px;
 
         &.active {
           background-color: $contraste;
@@ -103,3 +104,6 @@ $border: #4d51b3;
   background-color: $border;
 }
 //input formulario 
+tr{
+  background-color: $bgPrimary;
+}

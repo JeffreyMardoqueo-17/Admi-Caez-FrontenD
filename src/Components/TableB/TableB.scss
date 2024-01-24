@@ -1,0 +1,23 @@
+// TableB.scss
+.table-container {
+    margin: 5rem;
+}
+
+.custom-table {
+    // Aquí puedes agregar estilos personalizados para tu tabla
+    //   color:$bgPrimary;
+    
+    & th {
+        text-transform: uppercase;
+        color: #4d51b3;
+    }
+    
+    & td {
+        // Estilos para celdas de datos
+        color: red;
+    }
+}
+
+th {
+    color: #4d51b3;
+}
