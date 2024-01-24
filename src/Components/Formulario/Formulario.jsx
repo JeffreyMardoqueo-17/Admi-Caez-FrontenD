@@ -63,6 +63,7 @@ const Formulario = ({ onSubmit }) => {
                     <Input
                         type="text"
                         name="numeroDocumento"
+                        className='inputText'
                         id="numeroDocumento"
                         value={datosFormulario.numeroDocumento}
                         onChange={handleInputChange}
@@ -154,7 +155,7 @@ const Formulario = ({ onSubmit }) => {
                     </Input>
                 </FormGroup>
             </div>
-            <button type="submit" className="btn btn-primary">Enviar</button>
+            <button type="subit" className="boton w-100">Registrar</button>
         </Form>
     );
 }

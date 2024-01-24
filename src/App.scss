@@ -52,7 +52,6 @@ $border: #4d51b3;
   width: calc(100% - 17rem);
   /* Resta el ancho del Sidebar al 100% */
 }
-
 .flex {
   display: flex;
 }
@@ -89,3 +88,18 @@ $border: #4d51b3;
     }
   }
 }
+//botones generales
+.boton{
+  background-color: $bgPrimary;
+  border: 2px solid $border;
+  color: $white;
+  height: 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.boton:hover{
+  background-color: $border;
+}
+//input formulario 
