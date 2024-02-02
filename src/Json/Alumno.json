@@ -1,0 +1,29 @@
+[
+  {
+    "tipoDocumento": "NIE",
+    "numeroDocumento": "12345678",
+    "nombre": "Mark",
+    "apellido": "Otto",
+    "grado": "Primero",
+    "encargado": "YO",
+    "turno": "mañana"
+  },
+  {
+    "tipoDocumento": "DUI",
+    "numeroDocumento": "87654321",
+    "nombre": "Mateo",
+    "apellido": "Thornton",
+    "grado": "Segundo",
+    "encargado": "Mi mujer",
+    "turno": "mañana"
+  },
+  {
+    "tipoDocumento": "NIE",
+    "numeroDocumento": "98765432",
+    "nombre": "Larry",
+    "apellido": "the Bird",
+    "grado": "Tercero",
+    "encargado": "yooo",
+    "turno": "mañana"
+  }
+]

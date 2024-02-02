@@ -1,0 +1,59 @@
+
+// variables de colore sy eso
+$white: #Ffff;
+$black: #1c2326;
+$contraste: #05051A ;
+$bgPrimary: #05051A;
+$border: #4d51b3;
+
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.cardBox .card {
+    width: auto;
+    position: relative;
+    background: $white;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 3px solid $border;
+    margin-top: 50px;
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color:$border;
+}
+
+.cardBox .card .cardName {
+    color: $bgPrimary;
+    font-size: 1.1rem;
+    margin-top: 5px;
+}
+
+.cardBox .card .iconBx {
+    font-size: 50px;
+    color: $bgPrimary;
+}
+
+.cardBox .card:hover {
+    background: $bgPrimary;
+    border: 2px solid $border;
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName,
+.cardBox .card:hover .iconBx {
+    color: $white;
+}
